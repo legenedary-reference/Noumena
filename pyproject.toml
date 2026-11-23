@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "noumena"
+version = "0.1.0"
+description = "A universal lens for machine perception: zero-copy multi-modal sensor pipeline for local AI models."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+noumena = "noumena.eye:main"
+
+[tool.setuptools]
+packages = ["noumena"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
